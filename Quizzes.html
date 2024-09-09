@@ -1,0 +1,147 @@
+<html></html>
+ <head>
+  <title>
+   Kids Learning
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .menu-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #ffe0b2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
+        .profile-pic img {
+            width: 80px;
+            height: 80px;
+        }
+        .greeting {
+            font-size: 20px;
+            color: #333;
+            margin-top: 20px;
+        }
+        .name {
+            font-size: 24px;
+            color: #ff9800;
+            font-weight: bold;
+        }
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .card {
+            width: 150px;
+            height: 150px;
+            border-radius: 20px;
+            background-color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .card img {
+            width: 50px;
+            height: 50px;
+        }
+        .card-title {
+            font-size: 18px;
+            color: #333;
+            margin-top: 10px;
+        }
+        .card-subtitle {
+            font-size: 14px;
+            color: #999;
+        }
+        .math { background-color: #e0f7fa; }
+        .english { background-color: #fff3e0; }
+        .gujarati { background-color: #e1bee7; }
+        .science { background-color: #e3f2fd; }
+  </style>
+ </head>
+ <body>
+  <div class="menu-button">
+   <i class="fas fa-bars"></i>
+  </div>
+  <div class="container">
+   <div class="profile-pic">
+    <img alt="quiz img" height="80" src="https://cdn-icons-png.flaticon.com/128/5694/5694749.png" width="80"/>
+   </div>
+   <div class="greeting">
+    Quiz
+   </div>
+   <div class="name">
+    Cakka!
+   </div>
+   <div class="card-container">
+    <a class="card math" href="#math">
+     <img alt="Math icon" height="50" src="https://cdn-icons-png.flaticon.com/128/1628/1628984.png" width="50"/>
+     <div class="card-title">
+      Math
+     </div>
+     <div class="card-subtitle">
+      All about numbers
+     </div>
+    </a>
+    <a class="card english" href="#english">
+     <img alt="English icon" height="50" src="https://cdn-icons-png.flaticon.com/128/5786/5786243.png" width="50"/>
+     <div class="card-title">
+      English
+     </div>
+     <div class="card-subtitle">
+      Reading some words
+     </div>
+    </a>
+    <a class="card gujarati" href="#gujarati">
+     <img alt="Gujarati icon" height="50" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-Hh5RPsKhtBPsWCFSiEKnUJ6x/user-8qgiVpCV0U0b7zDjfFInHgjl/img-OSy3UJdrB6NmTSjqMVQzDMpr.png?st=2024-09-08T08%3A17%3A28Z&amp;se=2024-09-08T10%3A17%3A28Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-07T21%3A46%3A14Z&amp;ske=2024-09-08T21%3A46%3A14Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=zEfU1AvQB2o%2BhpOIrktD8KNMo%2BkIva6jpbSK8%2BdRAyM%3D" width="50"/>
+     <div class="card-title">
+      Gujarati
+     </div>
+     <div class="card-subtitle">
+      Learning Gujarati
+     </div>
+    </a>
+    <a class="card science" href="#science">
+     <img alt="Science icon" height="50" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-Hh5RPsKhtBPsWCFSiEKnUJ6x/user-8qgiVpCV0U0b7zDjfFInHgjl/img-KQpjllOn63bNUkeZFEJK6MKx.png?st=2024-09-08T08%3A17%3A26Z&amp;se=2024-09-08T10%3A17%3A26Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-07T23%3A07%3A32Z&amp;ske=2024-09-08T23%3A07%3A32Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=vUY0uAz8sL%2B98ZyKK%2BgT2fgF4Q2IULFY5qRHAm8FHGM%3D" width="50"/>
+     <div class="card-title">
+      Science
+     </div>
+     <div class="card-subtitle">
+      Exploring science
+     </div>
+    </a>
+   </div>
+  </div>
+ </body>
+</html>
