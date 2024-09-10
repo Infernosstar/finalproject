@@ -80,49 +80,50 @@
             }
         }
         .options input[type="radio"]:checked + label {
-    background-color: #ccc; /* Selected option background color */
-    border-color: #666; /* Selected option
+    background-color: #ccc; 
+    border-color: #666; 
     </style>
 </head>
 <body>
     <div class="container">
         <div class="video-container">
             <video controls>
-                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                <source src="videos/custard apple.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
         <div class="mcq">
-            <h2>What is the purpose of the HTML code below?</h2>
+            <h2>આ વીડિયોનો હેતુ શું છે?</h2>
             <ul class="options">
                 <li>
                     <input type="radio" id="optionA" name="answer">
-                    <label for="optionA">A) To create a hyperlink</label>
+                    <label for="optionA">A) કેળું</label>
                 </li>
                 <li>
                     <input type="radio" id="optionB" name="answer">
-                    <label for="optionB">B) To create a button with a left arrow symbol</label>
+                    <label for="optionB">B) સફરજન</label>
                 </li>
                 <li>
                     <input type="radio" id="optionC" name="answer">
-                    <label for="optionC">C) To create a dropdown menu</label>
+                    <label for="optionC">C) કસ્ટર્ડ સફરજન
+                    </label>
                 </li>
                 <li>
                     <input type="radio" id="optionD" name="answer">
-                    <label for="optionD">D) To create a checkbox</label>
+                    <label for="optionD">D)પપૈયું </label>
                 </li>
             </ul>
-            <button class="submit-btn" onclick="checkAnswer()">Submit</button>
+            <button class="submit-btn" onclick="checkAnswer()">મોકલો</button>
         </div>
     </div>
 
     <script>
         function checkAnswer() {
             var answer = document.querySelector('input[name="answer"]:checked').value;
-            if (answer === 'B) To create a button with a left arrow symbol') {
-                window.location.href = 'correct.html';
+            if (answer === 'C) કસ્ટર્ડ સફરજન') {
+                window.location.href = 'correctbanana.html';
             } else {
-                window.location.href = 'tryagain.html';
+                window.location.href = 'tryagainbanana.html';
             }
         }
     </script>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correct!</title>
+    <style>
+        /* Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        /* Container Styles */
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Header Styles */
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        /* Button Styles */
+        .btn {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #3e8e41;
+        }
+        
+        /* Mobile Styles */
+        @media only screen and (max-width: 600px) {
+            .container {
+                margin: 20px;
+                padding: 10px;
+            }
+            .header {
+                font-size: 18px;
+            }
+            .btn {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>ખરું!</h2>
+        </div>
+        <p>તમે સાચું જવાબ આપ્યો.</p>
+        <button class="btn" onclick="window.location.href = 'quizbanana.html'">Next Question</button>
+    </div>
+</body>
+</html>

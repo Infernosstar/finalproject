@@ -1,0 +1,193 @@
+<html></html>
+<head>
+    <style>
+        body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fffdd0; /* Cream background */
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 80%; /* updated to percentage value */
+  background-color: #fffacd; /* Light yellow background */
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: center;
+  margin: 0 auto; /* added to center the container horizontally */
+}
+
+.video-container {
+  width: 100%;
+  height: 40vh; /* updated to relative unit */
+  background-color: black;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.title {
+  font-size: 1.5em; /* updated to relative unit */
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.text {
+  font-size: 2em; /* updated to relative unit */
+  color: #8b4513; /* SaddleBrown color */
+  margin-bottom: 10px;
+}
+
+.content {
+  background-color: white; /* White background for drawing pad */
+  height: 40vh; /* updated to relative unit */
+  border-radius: 20px;
+  margin: 0 10px 10px 10px;
+  position: relative;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.navigation button {
+  background-color: #f0e68c; /* Khaki background */
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5em; /* updated to relative unit */
+  cursor: pointer;
+}
+
+canvas {
+  border-radius: 20px;
+  background-color: white; /* White background for drawing pad */
+  width: 100%; /* updated to percentage value */
+  height: 100%; /* updated to percentage value */
+}
+
+input[type="text"] {
+  text-align: center;
+  border: none;
+  background-color: #fffacd; /* Light yellow background */
+  font-size: 1.5em; /* updated to relative unit */
+  font-weight: bold;
+}
+
+/* added media queries for smaller screen sizes */
+@media only screen and (max-width: 768px) {
+  .container {
+    max-width: 90%; /* increased width for smaller screens */
+  }
+  .video-container {
+    height: 30vh; /* reduced height for smaller screens */
+  }
+  .content {
+    height: 30vh; /* reduced height for smaller screens */
+  }
+  .navigation button {
+    width: 30px;
+    height: 30px;
+    font-size: 1.2em; /* reduced font size for smaller screens */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    max-width: 95%; /* increased width for even smaller screens */
+  }
+  .video-container {
+    height: 20vh; /* reduced height for even smaller screens */
+  }
+  .content {
+    height: 20vh; /* reduced height for even smaller screens */
+  }
+  .navigation button {
+    width: 20px;
+    height: 20px;
+    font-size: 1em; /* reduced font size for even smaller screens */
+  }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="video-container">
+            <video controls>
+                <source src="videos/lemon.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="title">
+            <input type="text" id="titleInput" value="Lemon">
+        </div>
+        <div class="text" id="textDisplay">
+            લીંબુ
+        </div>
+        <div class="content">
+            <canvas id="drawCanvas" width="280" height="180"></canvas>
+        </div>
+        <div class="navigation">
+           <a href="mango.html"> <button id="prevButton">
+                ←
+            </button></a>
+            <a href="Papaya.html">
+            <button id="nextButton">
+                →
+            </button></a>
+        </div>
+    </div>
+
+    <script>
+        // Drawing on canvas
+        const canvas = document.getElementById('drawCanvas');
+        const ctx = canvas.getContext('2d');
+        let drawing = false;
+
+        canvas.addEventListener('mousedown', startDrawing);
+        canvas.addEventListener('mouseup', stopDrawing);
+        canvas.addEventListener('mousemove', draw);
+
+        function startDrawing(e) {
+            drawing = true;
+            draw(e);
+        }
+
+        function stopDrawing() {
+            drawing = false;
+            ctx.beginPath();
+        }
+
+        function draw(e) {
+            if (!drawing) return;
+            ctx.lineWidth = 2;
+            ctx.lineCap = 'round';
+            ctx.strokeStyle = 'black';
+
+            const rect = canvas.getBoundingClientRect();
+            ctx.lineTo(e.clientX - rect.left, e.clientY - rect.top);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(e.clientX - rect.left, e.clientY - rect.top);
+        }
+
+        // Changeable title
+        const titleInput = document.getElementById('titleInput');
+        titleInput.addEventListener('input', function() {
+            document.getElementById('textDisplay').innerText = titleInput.value;
+        });
+
+       
+    </script>
+</body>
+</html>

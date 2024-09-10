@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff; /* Change to white */
+            margin: 0; 
+            padding: 0;
+        }
+        header {
+            background-color: #dddddd; /* Change to light gray */
+            color: #333333; /* Change to dark gray */
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        header .menu-icon {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .search-bar {
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+            background-color: #f0f0f0; /* Change to light gray */
+            border-radius: 5px;
+            padding: 10px;
+        }
+        .search-bar input {
+            width: 80%;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+        }
+        .search-bar button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #e90577;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .results {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            &#128214; DICTIONARY
+        </div>
+        <div class="menu-icon">&#9776;</div>
+    </header>
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search for a video title...">
+        <button onclick="searchVideos()">Search</button>
+    </div>
+    <div class="results" id="results">
+        <!-- Results will be displayed here -->
+    </div>
+
+    <script>
+        function searchVideos() {
+            const searchTerm = document.getElementById("searchInput").value;
+            const videosFolder = "videos/";
+            const videoFiles = [
+                "apple.mp4",
+                "banana.mp4",
+                "custard.mp4",
+                // Add more video files here
+            ];
+
+            let resultsHTML = "";
+
+            for (const videoFile of videoFiles) {
+                if (videoFile.includes(searchTerm)) {
+                    resultsHTML += `<a href="${videosFolder}${videoFile}" target="_blank">${videoFile}</a><br>`;
+                }
+            }
+
+            document.getElementById("results").innerHTML = resultsHTML;
+        }
+    </script>
+</body>
+</html>
